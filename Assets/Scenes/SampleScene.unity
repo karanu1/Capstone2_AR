@@ -246,6 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 1976836715188523226, guid: 66fb98472e918ff4b80fce699befd160, type: 3}
   CText: {fileID: 0}
+  i: 0
 --- !u!1 &58239030
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,8 +281,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -55.13, y: 94.07}
-  m_SizeDelta: {x: 297.74, y: 107.87}
+  m_AnchoredPosition: {x: 86, y: 38.2}
+  m_SizeDelta: {x: 500, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &58239032
 MonoBehaviour:

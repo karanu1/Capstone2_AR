@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
 {
     public GameObject Bullet;
     public Text CText;
+    public int i;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +20,17 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetMouseButton(0)) {
-            CText.text = "MOUSE TOUCH";
-        }
+            i++;
+            CText.text = "MOUSE TOUCH: "+i;
+            CText.color = new Color(Random.Range(0, 256), Random.Range(0, 256), Random.Range(0, 256), 255);
+           
+         }
         if (Input.touchCount>0)
 
         {
-            CText.text = "SCREEn TOUCH";
+            CText.text = "SCREEn TOUCH:"+Input.touchCount;
         }
         if (Bullet)
         {

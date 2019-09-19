@@ -1340,7 +1340,7 @@ ScriptsOnlyBuild:
     className: WireframeTrackableEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 05df79e772439337d3fd70773f810166
+      Hash: d3a0ad225ffbadd6f797bc421bfc09a0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerAttack
