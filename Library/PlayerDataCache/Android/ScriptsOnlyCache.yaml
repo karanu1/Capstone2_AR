@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BulletMove
     - PlayerAttack
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -35,6 +36,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
@@ -54,13 +57,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9452}
     - Class: 114
-      Script: {instanceID: 9738}
+      Script: {instanceID: 9698}
     - Class: 114
-      Script: {instanceID: 9902}
+      Script: {instanceID: 9740}
     - Class: 114
       Script: {instanceID: 9904}
     - Class: 114
-      Script: {instanceID: 10924}
+      Script: {instanceID: 9906}
+    - Class: 114
+      Script: {instanceID: 10926}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -528,6 +533,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 850dd41890be05e7e64f309dca2f5e53
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BulletMove
   - hash:
       serializedVersion: 2
       Hash: 780e8f682b3221346c034a6712a0fd25
@@ -1340,7 +1351,7 @@ ScriptsOnlyBuild:
     className: WireframeTrackableEventHandler
   - hash:
       serializedVersion: 2
-      Hash: d3a0ad225ffbadd6f797bc421bfc09a0
+      Hash: 8b7e2ed50703ef8b323a933b4ac5ddd0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerAttack
@@ -1563,4 +1574,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: E:/Capstone2/TestBuild/dsfasdf.apk
+  playerPath: E:/Capstone2/TestBuild/Test_0920.apk

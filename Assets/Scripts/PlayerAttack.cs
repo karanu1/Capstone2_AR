@@ -8,6 +8,9 @@ public class PlayerAttack : MonoBehaviour
     public GameObject Bullet;
     public Text CText;
     public int i;
+    public float ShootingTermTime = 3;
+    public float ShootingTime = 0;
+    public bool TimeCheckStart = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,21 +23,45 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (TimeCheckStart == true)
+        {
+            if (ShootingTime < ShootingTermTime)
+            {
+                ShootingTime += Time.deltaTime;
+            }
+            if (ShootingTime >= ShootingTermTime)
+            {
+                ShootingTime = 0;
+                TimeCheckStart = false;
+            }
 
-        if (Input.GetMouseButton(0)) {
-            i++;
-            CText.text = "MOUSE TOUCH: "+i;
-            CText.color = new Color(Random.Range(0, 256), Random.Range(0, 256), Random.Range(0, 256), 255);
-           
-         }
-        if (Input.touchCount>0)
+        }
+        
+       
+        if (Input.touchCount==1)
 
         {
+            Touch touch = Input.GetTouch(0);
+
+            
+            switch (touch.phase) {
+                //이 switch 문 이 있어야 한번 터치할때 Bullet 여러개 instantiate 안됨
+                case TouchPhase.Ended:
+                    if (TimeCheckStart == false)
+                    {
+                        if (Bullet)
+                        {
+                            Instantiate(Bullet, transform.parent);
+                        }
+                        TimeCheckStart = true;
+                    }
+                   
+                    break;
+            }
+            
             CText.text = "SCREEn TOUCH:"+Input.touchCount;
+            
         }
-        if (Bullet)
-        {
-            //Instantiate(Bullet, transform.parent);
-        }
+        
     }
 }
